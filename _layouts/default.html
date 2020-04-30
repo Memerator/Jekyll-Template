@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta property="og:site_name" content="Memerator" />
-    <meta property="og:url" content="<%= request.url %>" />
     <meta property="twitter:site" content="Memerator">
     <style>
       @media (min-width: 576px) {
@@ -35,7 +34,7 @@
     {% include nav.html %}
 
     <div class="container" style="margin-top: 70px;">
-      <div class="jumbotron" <%= raw 'style="background-color: rgba(44, 47, 51, 0.9); color: #99AAB5;"' if session[:dark_mode] %>>
+      <div class="jumbotron">
 
         {{ content }}
       </div>
