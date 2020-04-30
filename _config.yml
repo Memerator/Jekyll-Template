@@ -6,3 +6,6 @@ title: Memerator
 nav:
 - title: <i class="fas fa-home"></i> Home
   url: /
+
+# Path of URL. Used for links and stuff
+url: my-website.memerator.me/nice
