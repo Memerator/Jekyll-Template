@@ -1,0 +1,133 @@
+body {
+  background-color: #fabc4d;
+}
+
+#macaroni {
+  position: absolute;
+  top: 50px;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+  padding-top: 3px;
+}
+
+/* Individual bars */
+.bar-5 {
+  height: 18px;
+  background-color: #4CAF50;
+}
+
+.bar-4 {
+  height: 18px;
+  background-color: #2196F3;
+}
+
+.bar-3 {
+  height: 18px;
+  background-color: #00bcd4;
+}
+
+.bar-2 {
+  height: 18px;
+  background-color: #ff9800;
+}
+
+.bar-1 {
+  height: 18px;
+  background-color: #f44336;
+}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+.ratings {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #b1b1b1;
+    overflow: hidden;
+}
+.full-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fde16d;
+}
+.empty-stars:before, .full-stars:before {
+    content:"\2605\2605\2605\2605\2605";
+    font-size: 14pt;
+}
+.empty-stars:before {
+    -webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+    -webkit-text-stroke: 1px orange;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
+
+/* Firefox */
+ @-moz-document url-prefix() {
+    .full-stars {
+        color: #ECBE24;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <head>
+    {% include icons.html %}
+    {% include scripts.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta property="og:site_name" content="Memerator" />
+    <meta property="og:url" content="<%= request.url %>" />
+    <meta property="twitter:site" content="Memerator">
+    <style>
+      @media (min-width: 576px) {
+        #fix {
+          margin-top: -50px;
+        }
+      }
+      @media (max-width: 576px) {
+        #fix {
+          margin-top: -20px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta name="description" content="{{ page.description }}" itemprop="description">
+    <meta property="twitter:site" content="{{ site.title }}">
+    <meta property="twitter:title" content="{{ page.title }} - {{ site.title }}">
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+    {% include nav.html %}
+
+    <div class="container" style="margin-top: 70px;">
+      <div class="jumbotron" <%= raw 'style="background-color: rgba(44, 47, 51, 0.9); color: #99AAB5;"' if session[:dark_mode] %>>
+
+        {{ content }}
+      </div>
+    </div>
+    <script>
+      $("img").lazyload();
+      twemoji.parse(document.body);
+    </script>
+    <style>
+      img.emoji {
+        width: 25px;
+      }
+    </style>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+  </body>
+</html>

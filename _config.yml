@@ -1,0 +1,7 @@
+# Title of the site.
+# Shows up in navbar and embeds
+title: Memerator
+
+# Nav Bar elements. "/path": "Display"
+nav:
+  index: Home
