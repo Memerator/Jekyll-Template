@@ -2,6 +2,7 @@
 # Shows up in navbar and embeds
 title: Memerator
 
-# Nav Bar elements. "/path": "Display"
+# Nav Bar elements.
 nav:
-  index: Home
+- title: <i class="fas fa-home"></i> Home
+  url: /

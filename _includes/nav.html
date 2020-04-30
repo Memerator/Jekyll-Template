@@ -1,5 +1,5 @@
 <style>
-#noti_bubble {
+  #noti_bubble {
   border: 2px solid #dc3545;
   border-radius: 50%;
   fill: #dc3545;
@@ -25,17 +25,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        {% for item in site.nav %}
         <li class="nav-item">
-          <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
+          <a class="nav-link" href="{{ item.url }}" {% if item.url==page.url %} class="active" {% endif %}>{{ item.title }}</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Test
-          </a>
-          <div class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/test">Test</a>
-          </div>
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
